@@ -1,7 +1,11 @@
-FROM --platform=$BUILDPLATFORM golang:alpine AS build-env
+# renovate: datasource=docker
+ARG GO_BASE=dhi.io/golang:1.26.1-alpine3.23-dev
+
+FROM --platform=$BUILDPLATFORM ${GO_BASE} AS build-env
 WORKDIR /src
 
-RUN apk add --no-cache ca-certificates tzdata && update-ca-certificates
+RUN apk upgrade --no-cache && \
+    apk add --no-cache ca-certificates tzdata && update-ca-certificates
 
 COPY ./go.mod ./go.sum ./
 RUN go mod download
@@ -51,12 +55,12 @@ COPY --from=build-env --chown=nonroot:nonroot --chmod=0555 /usr/share/zoneinfo /
 COPY --from=build-env --chown=nonroot:nonroot /staging/app /app
 COPY --from=build-env --chown=nonroot:nonroot /staging/data /data
 
-LABEL org.opencontainers.image.url="https://github.com/muety/wakapi" \
+LABEL org.opencontainers.image.url="https://github.com/sm-moshi/wakapi" \
     org.opencontainers.image.documentation="https://github.com/muety/wakapi" \
-    org.opencontainers.image.source="https://github.com/muety/wakapi" \
-    org.opencontainers.image.title="Wakapi" \
+    org.opencontainers.image.source="https://github.com/sm-moshi/wakapi" \
+    org.opencontainers.image.title="Wakapi (DHI-hardened)" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.description="A minimalist, self-hosted WakaTime-compatible backend for coding statistics"
+    org.opencontainers.image.description="Wakapi — DHI-hardened fork with bug fixes"
 
 USER nonroot
 

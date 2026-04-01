@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>sm-moshi/infra//.github/renovate/base.json",
+    "config:best-practices"
+  ],
+  "enabledManagers": ["gomod", "dockerfile"],
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "groupName": "Go dependencies",
+      "automerge": true,
+      "matchUpdateTypes": ["patch", "minor"]
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "groupName": "Dockerfile base images",
+      "labels": ["dependencies", "docker"]
+    }
+  ]
+}
