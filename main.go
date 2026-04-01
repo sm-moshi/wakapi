@@ -19,7 +19,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/lpar/gzipped/v2"
 	"github.com/muety/wakapi/utils"
-	httpSwagger "github.com/swaggo/http-swagger"
+	httpSwagger "github.com/swaggo/http-swagger/v2"
 	_ "gorm.io/driver/mysql"
 	_ "gorm.io/driver/postgres"
 	_ "gorm.io/driver/sqlserver"

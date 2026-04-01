@@ -4,7 +4,7 @@ import (
 	"codeberg.org/Codeberg/avatars"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	lru "github.com/hashicorp/golang-lru"
+	lru "github.com/hashicorp/golang-lru/v2"
 	conf "github.com/muety/wakapi/config"
 	"github.com/muety/wakapi/utils"
 	"net/http"
@@ -13,11 +13,11 @@ import (
 
 type AvatarHandler struct {
 	config *conf.Config
-	cache  *lru.Cache
+	cache  *lru.Cache[string, string]
 }
 
 func NewAvatarHandler() *AvatarHandler {
-	cache, err := lru.New(1 * 1000 * 64) // assuming an avatar is 1 kb, allocate up to 64 mb of memory for avatars cache
+	cache, err := lru.New[string, string](1 * 1000 * 64) // assuming an avatar is 1 kb, allocate up to 64 mb of memory for avatars cache
 	if err != nil {
 		panic(err)
 	}
@@ -50,5 +50,5 @@ func (h *AvatarHandler) Get(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "image/svg+xml")
 	w.Header().Set("Cache-Control", "max-age=2592000")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(data.(string)))
+	w.Write([]byte(data))
 }

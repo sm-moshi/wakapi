@@ -34,6 +34,7 @@ RUN mkdir ./data ./app && \
 # we could use `base:nonroot`, which already includes ca-certificates and tz, but that one it actually larger than alpine,
 # probably because of glibc, whereas alpine uses musl. The `static:nonroot`, doesn't include any libc implementation, because only meant for true static binaries without cgo, etc.
 
+# renovate: datasource=docker
 FROM gcr.io/distroless/static:nonroot
 WORKDIR /app
 
