@@ -25,7 +25,7 @@ require (
 	github.com/gorilla/schema v1.4.1
 	github.com/gorilla/securecookie v1.1.2
 	github.com/gorilla/sessions v1.4.0
-	github.com/hashicorp/golang-lru v1.0.2
+	github.com/hashicorp/golang-lru/v2 v2.0.7
 	github.com/jinzhu/configor v1.2.2
 	github.com/leandro-lugaresi/hub v1.1.1
 	github.com/lpar/gzipped/v2 v2.1.0
@@ -36,8 +36,8 @@ require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/stretchr/testify v1.11.1
-	github.com/stripe/stripe-go/v74 v74.30.0
-	github.com/swaggo/http-swagger v1.3.4
+	github.com/stripe/stripe-go/v76 v76.25.0
+	github.com/swaggo/http-swagger/v2 v2.0.2
 	github.com/swaggo/swag v1.16.6
 	go.uber.org/atomic v1.11.0
 	golang.org/x/crypto v0.49.0
@@ -49,7 +49,7 @@ require (
 )
 
 require (
-	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
+	github.com/fxamacker/cbor/v2 v2.9.1 // indirect
 	github.com/go-jose/go-jose/v3 v3.0.1 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.3 // indirect
 	github.com/go-openapi/swag/conv v0.25.4 // indirect
@@ -64,6 +64,7 @@ require (
 	github.com/google/go-tpm v0.9.8 // indirect
 	github.com/klauspost/cpuid/v2 v2.3.0 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
+	github.com/swaggo/files/v2 v2.0.0 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
@@ -104,7 +105,6 @@ require (
 	github.com/samber/slog-multi v1.8.0
 	github.com/samber/slog-sentry/v2 v2.10.3
 	github.com/stretchr/objx v0.5.2 // indirect
-	github.com/swaggo/files v1.0.1 // indirect
 	golang.org/x/exp v0.0.0-20260112195511-716be5621a96 // indirect
 	golang.org/x/image v0.35.0 // indirect
 	golang.org/x/net v0.51.0 // indirect
