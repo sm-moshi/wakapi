@@ -1,5 +1,5 @@
 # renovate: datasource=docker
-ARG GO_BASE=dhi.io/golang:1.26.1-alpine3.23-dev
+ARG GO_BASE=dhi.io/golang:1.26.1-alpine3.23-dev@sha256:a6d86aa25fd494bd7f02241aa8611f14a95ce58fa22e51d4ab90891db1d7432a
 
 FROM --platform=$BUILDPLATFORM ${GO_BASE} AS build-env
 WORKDIR /src
@@ -34,8 +34,7 @@ RUN mkdir ./data ./app && \
 # we could use `base:nonroot`, which already includes ca-certificates and tz, but that one it actually larger than alpine,
 # probably because of glibc, whereas alpine uses musl. The `static:nonroot`, doesn't include any libc implementation, because only meant for true static binaries without cgo, etc.
 
-# renovate: datasource=docker
-FROM gcr.io/distroless/static:nonroot
+FROM gcr.io/distroless/static:nonroot@sha256:e3f945647ffb95b5839c07038d64f9811adf17308b9121d8a2b87b6a22a80a39
 WORKDIR /app
 
 # See README.md and config.default.yml for all config options
