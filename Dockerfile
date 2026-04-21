@@ -1,5 +1,5 @@
 # renovate: datasource=docker
-ARG GO_BASE=dhi.io/golang:1.26.1-alpine3.23-dev@sha256:a6d86aa25fd494bd7f02241aa8611f14a95ce58fa22e51d4ab90891db1d7432a
+ARG GO_BASE=dhi.io/golang:1.26.2-alpine3.23-dev@sha256:478ffa216735b5e2b1da36e22b508dff38e7bcc14122e94fb16bf2b1bf1f6c59
 
 FROM --platform=$BUILDPLATFORM ${GO_BASE} AS build-env
 WORKDIR /src
