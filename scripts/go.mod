@@ -7,7 +7,7 @@ replace github.com/muety/wakapi => ..
 require (
 	github.com/glebarez/sqlite v1.11.0
 	github.com/jinzhu/configor v1.2.2
-	github.com/muety/wakapi v0.0.0-20260403085423-79a24d62c284
+	github.com/muety/wakapi v0.0.0-20260420063844-161e985433d5
 	github.com/schollz/progressbar/v3 v3.19.0
 	gorm.io/driver/mysql v1.6.0
 	gorm.io/driver/postgres v1.6.0
