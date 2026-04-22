@@ -36,7 +36,7 @@ require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/stretchr/testify v1.11.1
-	github.com/stripe/stripe-go/v74 v74.30.0
+	github.com/stripe/stripe-go/v76 v76.25.0
 	github.com/stripe/stripe-go/v76 v76.25.0
 	github.com/swaggo/http-swagger v1.3.4
 	github.com/swaggo/swag v1.16.6
