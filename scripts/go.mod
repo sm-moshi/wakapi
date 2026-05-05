@@ -7,7 +7,7 @@ replace github.com/muety/wakapi => ..
 require (
 	github.com/glebarez/sqlite v1.11.0
 	github.com/jinzhu/configor v1.2.2
-	github.com/muety/wakapi v0.0.0-20260430074806-c100094e61ee
+	github.com/muety/wakapi v0.0.0-20260502070126-671994ab416e
 	github.com/schollz/progressbar/v3 v3.19.0
 	gorm.io/driver/mysql v1.6.0
 	gorm.io/driver/postgres v1.6.0
@@ -24,12 +24,12 @@ require (
 	github.com/duke-git/lancet/v2 v2.3.9 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.1 // indirect
-	github.com/getsentry/sentry-go v0.46.0 // indirect
+	github.com/getsentry/sentry-go v0.46.2 // indirect
 	github.com/glebarez/go-sqlite v1.22.0 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-sql-driver/mysql v1.9.3 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
-	github.com/go-webauthn/webauthn v0.17.0 // indirect
+	github.com/go-webauthn/webauthn v0.17.2 // indirect
 	github.com/go-webauthn/x v0.2.3 // indirect
 	github.com/gofrs/uuid/v5 v5.4.0 // indirect
 	github.com/gohugoio/hashstructure v0.6.0 // indirect
